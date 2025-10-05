@@ -1,4 +1,4 @@
-#import "../utils/style.typ": ziti, zihao
+#import "../utils/style.typ": zihao, ziti
 #import "../utils/datetime-display.typ": datetime-en-display, datetime-en-display-without-day
 
 #let cover-en-page(
@@ -69,14 +69,9 @@
     columns: (50%, 50%),
     row-gutter: 0.6em,
     [#info-key-en("Author:")],
-    [#if anonymous { } else {
-        info-value-en(info.name_en)
-      }],
-
-    [#info-key-en("Supervisor:")],
-    [#if anonymous { } else {
-        info-value-en(info.supervisor_en)
-      }],
+    [#if anonymous {} else {
+      info-value-en(info.name_en)
+    }],
   )
 
   v(4cm)

@@ -17,6 +17,7 @@
 #import "pages/acknowledgement.typ": acknowledgement-page
 #import "pages/achievement.typ": achievement-page
 #import "pages/summary-en.typ": summary-en-page
+#import "utils/header.typ": heading-title
 #import "@preview/lovelace:0.3.0": *
 
 #let documentclass(
@@ -33,9 +34,6 @@
       student_id: "520XXXXXXXX",
       name: "张三",
       name_en: "Zhang San",
-      degree: "工学硕士",
-      supervisor: "李四教授",
-      supervisor_en: "Prof. Li Si",
       title: "上海交通大学学位论文格式模板",
       title_en: "DISSERTATION TEMPLATE FOR MASTER DEGREE OF ENGINEERING IN SHANGHAI JIAO TONG UNIVERSITY",
       school: "某某学院",

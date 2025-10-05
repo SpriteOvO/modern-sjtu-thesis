@@ -12,15 +12,12 @@
 
   align(
     center,
-    image(
-      "../assets/sjtu-logo.png",
-      width: 2.79cm,
-    ),
+    info.logo,
   )
 
   v(0.4cm)
 
-  let cover-title = "上海交通大学学位论文"
+  let cover-title = info.cover_title
 
   align(
     center,
@@ -72,15 +69,8 @@
       info-value(info.student_id)
     }],
 
-    [#info-key("导师")],
-    [#text(weight: "bold")[：]],
-    [#if anonymous {} else {
-      info-value(info.supervisor)
-    }],
-
     [#info-key("学院")], [#text(weight: "bold")[：]], [#info-value(info.school)],
     [#info-key("专业名称")], [#text(weight: "bold")[：]], [#info-value(info.major)],
-    [申请学位层次], [#text(weight: "bold")[：]], [#info-value(info.degree)],
   )
 
   v(2.8cm)

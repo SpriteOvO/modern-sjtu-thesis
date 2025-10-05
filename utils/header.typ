@@ -1,5 +1,7 @@
 #import "style.typ": zihao, ziti
 
+#let heading-title = state("heading-title", none)
+
 #let no-numbering-page-header(
   doctype: "master",
   twoside: false,
@@ -56,35 +58,17 @@
       // 奇数页和偶数页的页眉是对称的
       if calc.odd(counter(page).get().first()) {
         // 奇数页左边是论文名称，右边是章节标题
-        if doctype == "doctor" {
-          "上海交通大学博士学位论文"
-        } else if doctype == "master" {
-          "上海交通大学硕士学位论文"
-        } else {
-          "上海交通大学学位论文"
-        }
+        heading-title.get()
         h(1fr)
         headingTitle
       } else {
         // 偶数页对称过来
         headingTitle
         h(1fr)
-        if doctype == "doctor" {
-          "上海交通大学博士学位论文"
-        } else if doctype == "master" {
-          "上海交通大学硕士学位论文"
-        } else {
-          "上海交通大学学位论文"
-        }
+        heading-title.get()
       }
     } else {
-      if doctype == "doctor" {
-        "上海交通大学博士学位论文"
-      } else if doctype == "master" {
-        "上海交通大学硕士学位论文"
-      } else {
-        "上海交通大学学位论文"
-      }
+      heading-title.get()
       h(1fr)
       headingTitle
     }
@@ -145,13 +129,7 @@
       // 奇数页和偶数页的页眉是对称的
       if calc.odd(counter(page).get().first()) {
         // 奇数页左边是论文名称，右边是章节标题
-        if doctype == "doctor" {
-          "上海交通大学博士学位论文"
-        } else if doctype == "master" {
-          "上海交通大学硕士学位论文"
-        } else {
-          "上海交通大学学位论文"
-        }
+        heading-title.get()
         h(1fr)
         headingNumber
         h(1em)
@@ -162,22 +140,10 @@
         h(1em)
         headingTitle
         h(1fr)
-        if doctype == "doctor" {
-          "上海交通大学博士学位论文"
-        } else if doctype == "master" {
-          "上海交通大学硕士学位论文"
-        } else {
-          "上海交通大学学位论文"
-        }
+        heading-title.get()
       }
     } else {
-      if doctype == "doctor" {
-        "上海交通大学博士学位论文"
-      } else if doctype == "master" {
-        "上海交通大学硕士学位论文"
-      } else {
-        "上海交通大学学位论文"
-      }
+      heading-title.get()
       h(1fr)
       headingNumber
       h(1em)
@@ -241,13 +207,7 @@
       // 奇数页和偶数页的页眉是对称的
       if calc.odd(counter(page).get().first()) {
         // 奇数页左边是论文名称，右边是章节标题
-        if doctype == "doctor" {
-          "上海交通大学博士学位论文"
-        } else if doctype == "master" {
-          "上海交通大学硕士学位论文"
-        } else {
-          "上海交通大学学位论文"
-        }
+        heading-title.get()
         h(1fr)
         headingNumber
         h(1em)
@@ -258,22 +218,10 @@
         h(1em)
         headingTitle
         h(1fr)
-        if doctype == "doctor" {
-          "上海交通大学博士学位论文"
-        } else if doctype == "master" {
-          "上海交通大学硕士学位论文"
-        } else {
-          "上海交通大学学位论文"
-        }
+        heading-title.get()
       }
     } else {
-      if doctype == "doctor" {
-        "上海交通大学博士学位论文"
-      } else if doctype == "master" {
-        "上海交通大学硕士学位论文"
-      } else {
-        "上海交通大学学位论文"
-      }
+      heading-title.get()
       h(1fr)
       headingNumber
       h(1em)
